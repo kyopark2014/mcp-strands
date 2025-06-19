@@ -348,7 +348,11 @@ def load_config(mcp_type):
                     "command": "python",
                     "args": [
                         "application/mcp_server_use_aws.py"
-                    ]
+                    ],
+                    "env": {
+                        "AWS_REGION": aws_region,
+                        "FASTMCP_LOG_LEVEL": "ERROR"
+                    }
                 }
             }
         }
